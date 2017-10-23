@@ -69,6 +69,7 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
+  # Provisioning phase 1: Bootstrap install Puppet and modules
   config.vm.provision "bootstrap", type: "shell" do |s|
     s.path = "provisioning/bootstrap.sh"
   end
